@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  vpn-backend:
+    image: your-vpn-backend-image
+    ports:
+      - "5000:5000"
+    restart: always
+    volumes:
+      - ./logs:/var/log/vpn
+networks:
+  vpn-network:
+    driver: bridge
